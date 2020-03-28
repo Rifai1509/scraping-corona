@@ -1,0 +1,8 @@
+{% extends 'index.html' %}
+
+{% block body %}
+  {% for x in area %}
+    {{x.find('div', 'gsc-thumbnail-inside').find('div', 'gs-title').text|safe}}<br/>
+    {{x.find('img', 'gs-image')|safe}}<br/>
+  {% endfor %}
+{% endblock %}
